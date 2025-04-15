@@ -307,7 +307,7 @@ body {
   color: var(--secondary-color);
   font-size: 16px;
   font-weight: bold;
-  padding: 8px;
+  padding: 0px;
   cursor: pointer;
 }
 
@@ -607,7 +607,7 @@ body {
   /* Custom styling for the slider thumb (draggable element) */
   .slider input::-webkit-slider-thumb {
     height: 486px;
-    width: 3px;
+    width: 10px;
     background: none;
     -webkit-appearance: none; /* Remove default thumb appearance */
     cursor: col-resize; /* Cursor indicating column resizing */
