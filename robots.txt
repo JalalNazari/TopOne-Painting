@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /vendor/
+Disallow: /src/
+Disallow: /.env
+Disallow: /composer.json
+Disallow: /composer.lock
+
+Sitemap: https://yourdomain.com/sitemap.xml

@@ -56,9 +56,10 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
+  color: var(--secondary-color);
 }
 
-.navbar-left h1, .logo h1 {
+.brand-name {
   font-weight: 900;
   font-size: 2em;
   color: var(--secondary-color);
@@ -75,7 +76,7 @@ body {
   color: var(--secondary-color);
 }
 
-.navbar-center a:hover, .navbar-center .active, .about-hero-links a:hover{
+.navbar-center a:hover, .navbar-center .active, .about-hero-links a:hover, .footer-bottom a:hover{
   text-decoration: underline;
 }
 
@@ -164,9 +165,10 @@ body {
 
 /* Responsive layout for navbar */
 @media (max-width: 911px) {
-  .navbar-left h1 {
+  .brand-name {
     font-weight: 900;
     font-size: 1.4em;
+    color: var(--secondary-color);
   }
 
   .logo-img {
@@ -349,7 +351,7 @@ body {
   }
 
   .hero-text {
-    max-width: 50%;
+    max-width: 45%;
     text-align: left;
   }
 
@@ -459,31 +461,30 @@ body {
     border-radius: 10px;
     width: 50%;
     height: fit-content;
-    text-align: center;
+    text-align: left;
     margin: 20px auto;  
     box-shadow: var(--box-shadow);
 }
-.contact-img{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.contact-img img{
-    height: auto;
-    
+.contact-form h3{
+  margin-bottom: 10px;
 }
 .contact-form input,.contact-form textarea {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
     border: none;
     outline: none;
     border-radius: 5px;
     box-sizing: border-box;
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 .contact-form textarea {
     padding: 60px 10px;
+}
+.label{
+  font-size: 15px;
+  color: var(--secondary-color);
+  text-align: left;
 }
 .contact-form button {
     color: var(--box-cards-color);
@@ -495,11 +496,31 @@ body {
     cursor: pointer;
     border: 1px solid var(--secondary-color);
     transition: 0.3s ease;
+    margin: 10px 0;
 }
 .contact-form button:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
+}
+.error-message, .error{
+  color: red;
+  font-size: 12px;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  /* display: none;  Hide errors initially */
+}
+.successs{
+  color: var(--secondary-color);
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  /* display: none;  Hide errors initially */
+}
+.success-message{
+  font-size: 1.3em;
+  color: var(--paragraph-color);
+  margin-bottom: 10px;
 }
 @media (max-width: 768px) {
   .contact-form-img {
@@ -772,7 +793,7 @@ body {
 
 .subtitle{
   font-size: 1.3em;
-  color: var(--paragraph-colorr);
+  color: var(--paragraph-color);
   margin-bottom: 40px;
   margin-top: 7px;
 }
@@ -820,7 +841,7 @@ body {
 
 .area-details p {
   font-size: 0.95em;
-  color: var(--paragraph-colorr);
+  color: var(--paragraph-color);
   line-height: 1.6;
 }
 
@@ -925,6 +946,7 @@ background-color: var(--primary-color);
   margin: 30px auto;
   flex-wrap: wrap;
 }
+
 .who-we-are-p{
   font-size: 1em;
   color: var(--paragraph-color);
@@ -1026,6 +1048,7 @@ background-color: var(--primary-color);
   align-items: center;
   cursor: pointer;
   padding: 0.5rem 0;
+  color: var(--title-color);
 }
 
 .faq-answer {
@@ -1050,17 +1073,20 @@ background-color: var(--primary-color);
 footer {
     background: var(--primary-color);
     color: var(--box-cards-color);
-    padding: 60px 40px 20px;
+    padding: 60px 40px 20px 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 100px;
+    gap: 80px;
   }
   
   .logo{
     text-align: center;
-    color: var(--box-cards-color);
     line-height: 40px;
+  }
+  .logo-color{
+    color: var(--secondary-color);
+    text-decoration: none;
   }
   .footer-section h3 {
     margin-bottom: 15px;
@@ -1128,6 +1154,12 @@ footer {
     color: var(--secondary-color);
     border: var(--secondary-color) 1px solid;
   }
+  .success-message{
+    display: block;
+    font-size: 15px;
+    text-align: left;
+    color: var(--secondary-color);
+  }
   
   .footer-bottom {
     width: 100%;
@@ -1144,6 +1176,7 @@ footer {
   }
   .footer-bottom a{
     text-decoration: none;
+    color: var(--secondary-color);
   }
   
   @media (max-width: 768px) {
